@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+  @include fluid-font-size(600px, 1000px, 18px, 20px);
+  line-height: 1.2em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.clearfix:after {
+  content:'';
+  display: block;
+  clear: both;
+}
+
+.todolist {
+  @extend .clearfix;
+  min-width: 280px;
+  max-width: 500px;
+  padding: 10px 25px 20px;
+  margin: 40px auto;
+  background-color: lightgreen;
+  border-radius: 4px;
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2em;
+    margin: 0 0 10px;
+  }
+
+  &__add-task {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tasks {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+  }
+
+  &__controls {
+    margin-top: 15px;
+    border-top: 1px solid lighten(#666, 50%);
+  }
+
+  &__tips {
+    color: #666;
+    font-size: 0.8em;
+    margin: 8px 0;
+  }
+}
+
+.tasks {
+  &__item {
+    padding: 10px;
+    padding-left: 0;
+    position: relative;
+    cursor: pointer;
+
+    &:hover .label {
+      color: $akcent-color;
+    }
+  }
+}

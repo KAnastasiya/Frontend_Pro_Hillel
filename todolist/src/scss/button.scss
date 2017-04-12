@@ -1,0 +1,42 @@
+.btn {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 2px;
+  opacity: 0.5;
+
+  &--primary {
+    color: #fff;
+    background-color: $akcent-color;
+  }
+
+  &--additional {
+    color: #666;
+    background-color: #ddd;
+  }
+
+  &--clear {
+    float: right;
+  }
+
+  &:not(:disabled) {
+    opacity: 1;
+    box-shadow: 0 0 3px $shadow-color;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+      box-shadow: 0 0 5px $shadow-color;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

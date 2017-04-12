@@ -1,0 +1,30 @@
+.icon {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.7;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &--remove {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA8rAAAPKwEMainsAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAABhQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAXGJBvQAAAAd0Uk5TAE2Ej6Hh+UxA/JcAAABqSURBVBhXY2AMYoACVQEGsXIDCJu5PJEhvLwYwjEvL2VQL4dIMZeXF4EIsJQ5WBBCQsUgFEQIQsMUg6RK3KESYCmYBFgKLsHAAFRUAmOjcFCUIRuAYjSypSjOQXYoihdQPIfibZQAQQ4qAPz6NjH0jTzlAAAAAElFTkSuQmCC');
+  }
+}
