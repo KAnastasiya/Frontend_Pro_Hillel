@@ -4,43 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home tasks</title>
-    <link href="styles.css" rel="stylesheet">
+    <title>Balls</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="styles.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
-      <h1 class="title">Home tasks (Hillel IT School)</h1>
-      <dl class="list">
-        <dt class="list__item">
-          <a href="" class="list__link">Solar system</a>
-        </dt>
-        <dd class="list__details">Прототип солнечной системы. Практикуем css-анимацию (2D и 3D)</dd>
-
-        <dt class="list__item">
-          <a href="" class="list__link">Clock</a>
-        </dt>
-        <dd class="list__details">Определяем угол между стрелками часов. Практикуем canvas</dd>
-
-        <dt class="list__item">
-          <a href="" class="list__link">Balls</a>
-        </dt>
-        <dd class="list__details">Создание по клику шарика с произвольной траекторией движения. Практикуем canvas</dd>
-
-        <dt class="list__item">
-          <a href="" class="list__link">Drawing tool</a>
-        </dt>
-        <dd class="list__details">Примитивная рисовалка. Практикуем canvas</dd>
-
-        <dt class="list__item">
-          <a href="" class="list__link">Video player</a>
-        </dt>
-        <dd class="list__details">Небольшой видеоплеер. Знакомимся с тегом video</dd>
-
-        <dt class="list__item">
-          <a href="" class="list__link">RPG</a>
-        </dt>
-        <dd class="list__details">Примитивная rpg-игра. Практикуем прототипы в javaScript</dd>
-      </dl>
+    <canvas class="balls-container balls-container--canvas" width="500" height="400"></canvas>
+    <svg class="balls-container balls-container--svg" width="500" height="400"></svg>
+    <p style="text-align: center">Click anywhere in the filled area</p>
+    <div class="modes">
+      <div class="modes__item modes-canvas">
+        <input class="modes-canvas" type="radio" name="mode" value="canvas" id="canvas">
+        <label class="modes-canvas" for="canvas">Canvas</label>
+      </div>
+      <div class="modes__item modes-svg">
+        <input class="modes-svg" type="radio" name="mode" value="svg" id="svg">
+        <label class="modes-svg" for="svg">SVG</label>
+      </div>
     </div>
+    <script src="script.min.js"></script>
   </body>
 </html>
