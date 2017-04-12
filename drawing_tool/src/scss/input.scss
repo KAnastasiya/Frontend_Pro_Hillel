@@ -1,0 +1,72 @@
+.custom-color {
+  border: $input-border-color;
+}
+
+.custom-radio {
+  margin: 2px 0;
+  background-color: $main-color;
+  opacity: 0.5;
+  position: relative;
+
+  &--checked {
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--pencil::after {
+    background-image: url('img/pencil.svg');
+  }
+
+  &--eraser::after {
+    background-image: url('img/eraser.svg');
+  }
+
+  &--rect::after,
+  &--circle::after {
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &--rect::after {
+    height: 20px;
+  }
+
+  &--circle::after {
+    border-radius: 50%;
+  }
+}
+
+.input {
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--color {
+    height: 25px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &--radio {
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+  }
+}

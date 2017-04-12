@@ -1,0 +1,35 @@
+.playlist {
+  flex: 1 1 20%;
+  min-width: 300px;
+  max-height: 540px;
+  padding: 20px 0;
+  margin: 0 0 0 40px;
+  list-style: none;
+  overflow-y: auto;
+
+  &__item {
+    padding: 10px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.track {
+  &.playlist__item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus,
+  &:active {
+    color: green;
+  }
+
+  &--current {
+    font-weight: bold;
+  }
+
+  &:not(.track--current) {
+    cursor: pointer;
+  }
+}

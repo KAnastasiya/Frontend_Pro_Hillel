@@ -1,0 +1,27 @@
+{
+  "name": "RPG",
+  "author": "Anastasiia Kozenko",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "webpack",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-object-rest-spread": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-stage-2": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*",
+    "html-webpack-plugin": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  }
+}

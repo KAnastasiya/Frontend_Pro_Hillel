@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Video player
+    link(href='favicon.ico', rel='icon', type='image/x-icon')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext', rel='stylesheet')
+    link(href='style.min.css', rel='stylesheet')
+  body
+    .wrapper
+      .video-wrapper
+        video(preload='auto', poster='', controls, autoplay).video
+          each format in ['mp4', 'ogg', 'webm']
+            source(class='video__src video__src--' + format, src='', type='video/' + format)
+        .video-overlay
+      ul.playlist
+        each track in tracks
+          li(data-id=track.id).playlist__item.track= track.artist
+            unescaped!=' - '
+            span.track= track.song
+    script(src='script.min.js')

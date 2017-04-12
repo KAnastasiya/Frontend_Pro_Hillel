@@ -1,0 +1,33 @@
+{
+    "tracks": [{
+        "id": "0",
+        "artist": "Loboda",
+        "song": "Твои глаза",
+        "poster": "Loboda/your_eyes.jpg",
+        "src": "Loboda/your_eyes"
+    }, {
+        "id": "1",
+        "artist": "Shakira",
+        "song": "Chantaje",
+        "poster": "Shakira/chantaje.jpg",
+        "src": "Shakira/chantaje"
+    }, {
+        "id": "2",
+        "artist": "Shakira ft. Rihanna",
+        "song": "Can't Remember to Forget You",
+        "poster": "Shakira/can't_remember_to_forget_you.jpg",
+        "src": "Shakira/can't_remember_to_forget_you"
+    }, {
+        "id": "3",
+        "artist": "The Hardkiss",
+        "song": "Rain",
+        "poster": "The_Hardkiss/rain.jpg",
+        "src": "The_Hardkiss/rain"
+    }, {
+        "id": "4",
+        "artist": "The Hardkiss",
+        "song": "Stones",
+        "poster": "The_Hardkiss/stones.jpg",
+        "src": "The_Hardkiss/stones"
+    }]
+}

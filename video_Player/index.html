@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video player</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link href="style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="video-wrapper">
+        <video class="video" preload="auto" poster="" controls autoplay>
+          <source class="video__src video__src--mp4" src="" type="video/mp4">
+          <source class="video__src video__src--ogg" src="" type="video/ogg">
+          <source class="video__src video__src--webm" src="" type="video/webm">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      <ul class="playlist">
+        <li class="playlist__item track" data-id="0">Loboda
+          <unescaped> - </unescaped><span class="track">Твои глаза</span>
+        </li>
+        <li class="playlist__item track" data-id="1">Shakira
+          <unescaped> - </unescaped><span class="track">Chantaje</span>
+        </li>
+        <li class="playlist__item track" data-id="2">Shakira ft. Rihanna
+          <unescaped> - </unescaped><span class="track">Can't Remember to Forget You</span>
+        </li>
+        <li class="playlist__item track" data-id="3">The Hardkiss
+          <unescaped> - </unescaped><span class="track">Rain</span>
+        </li>
+        <li class="playlist__item track" data-id="4">The Hardkiss
+          <unescaped> - </unescaped><span class="track">Stones</span>
+        </li>
+      </ul>
+    </div>
+    <script src="script.min.js"></script>
+  </body>
+</html>

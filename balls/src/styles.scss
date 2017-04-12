@@ -1,0 +1,41 @@
+body {
+  background-color: lightcyan;
+}
+
+.balls-container {
+  background-color: #fff59d;
+  margin: 100px auto 0;
+}
+
+.tip {
+  text-align: center;
+}
+
+.modes {
+  padding: 10px;
+  margin: 5px 0 5px 5px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+
+  input {
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+}

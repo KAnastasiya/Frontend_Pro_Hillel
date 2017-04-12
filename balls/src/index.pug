@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Balls
+    link(href='favicon.ico', rel='icon', type='image/x-icon')
+    link(href='styles.min.css', rel='stylesheet')
+  body
+    canvas(width='500', height='400').balls-container.balls-container--canvas
+    svg(width='500', height='400').balls-container.balls-container--svg
+    p(style='text-align: center;') Click anywhere in the filled area
+    .modes
+        .modes__item.modes-canvas
+          input(type='radio', name='mode', value='canvas', id='canvas').modes-canvas
+          label(for='canvas').modes-canvas Canvas
+        .modes__item.modes-svg
+          input(type='radio', name='mode', value='svg', id='svg').modes-svg
+          label(for='svg').modes-svg SVG
+    script(src='script.min.js')

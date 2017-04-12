@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Drawing tool
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='favicon.ico', rel='icon', type='image/x-icon')
+    link(href='style.min.css', rel='stylesheet')
+  body
+    .drawing-tool
+      .drawing-tool__canvases
+      .drawing-tool__toolbar.toolbar
+        .toolbar__tools
+          .field.field--stroke-color
+            label(for='stroke-color').label.label--stroke-color Stroke Color
+            .custom-color
+              input(
+                type='color',
+                id='stroke-color',
+                value='#1976D2',
+                title='Color is using for lines and outlines of shapes'
+              ).input.input--color.input--stroke-color
+          .field.field--fill-color
+            label(for='fill-color').label.label--fill-color Fill Color
+            .custom-color
+              input(
+                type='color',
+                id='fill-color',
+                value='#ffffff',
+                title='Color is using for eraser and filling of shapes'
+                ).input.input--color.input--fill-color
+          .field.field--line-weight
+            label(for='line-weight').label.label--line-weight Line weight
+            .custom-select
+              select.select.select--line-weight
+                option(value='1') 1px
+                option(value='3', selected) 3px
+                option(value='5') 5px
+                option(value='8') 8px
+          .field.field--tools
+            .custom-radio.custom-radio--pencil
+              input(type='radio', name='tools', value='pencil', title='Pencil').input.input--radio.input--pencil
+            .custom-radio.custom-radio--eraser
+              input(type='radio', name='tools', value='eraser', title='Eraser').input.input--radio.input--eraser
+            .custom-radio.custom-radio--rect
+              input(type='radio', name='tools', value='rect', title='Rectangle').input.input--radio.input--rect
+            .custom-radio.custom-radio--circle
+              input(type='radio', name='tools', value='circle', title='Circle').input.input--radio.input--circle
+        .toolbar__controls
+          a(href='#', download='canvas').btn.btn--primary.btn--save Save
+          button(type='button').btn.btn--additional.btn--clear Clear
+      img(id="results", width=150, height=150)
+    script(src='script.min.js')

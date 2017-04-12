@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Clock
+    link(href='favicon.ico', rel='icon', type='image/x-icon')
+    link(href='style.min.css', rel='stylesheet')
+  body
+    .wrapper
+      canvas(width='320', height='320').clock#clock
+      .row
+        .field
+          input(type='number', min='0', max='23').input#hours
+        .field
+          input(type='number', min='0', max='59').input#minutes
+        .field
+          input(type='number', min='0', max='59').input#seconds
+        button(type='button').btn.btn--apply Применить
+      .row
+        p.degree Угол между часовой и минутной стрелками (в градусах):
+          span.degree__value#degree__value
+    script(src='script.min.js')

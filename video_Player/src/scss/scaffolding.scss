@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 14px 'Roboto';
+  line-height: 1.4;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('img/bg.jpg') no-repeat center;
+  background-size: cover;
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0 40px;
+  margin: auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+}

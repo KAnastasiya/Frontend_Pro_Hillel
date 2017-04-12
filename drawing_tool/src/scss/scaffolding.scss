@@ -1,0 +1,65 @@
+.drawing-tool {
+  display: flex;
+  width: $canvas-width + $toolbar-width;
+  margin: 50px auto;
+  border: 2px solid $main-color;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__canvases {
+    height: $canvas-height;
+    flex: 0 0 $canvas-width;
+    position: relative;
+  }
+
+  &__canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__toolbar {
+    flex: 0 0 $toolbar-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $main-color--light;
+    border-left: 1px solid $main-color;
+  }
+}
+
+.toolbar {
+  &__tools,
+  &__controls {
+    padding: $toolbar-padding;
+  }
+
+  &__controls {
+    border-top: 1px solid $main-color;
+  }
+}
+
+.field {
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  &--tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+    border: $input-border-color;
+    padding: 2px;
+  }
+}
+
+.label {
+  font-size: 14px;
+  color: $text-color;
+  margin-bottom: 5px;
+}

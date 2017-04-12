@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Drawing tool</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="drawing-tool">
+      <div class="drawing-tool__canvases"></div>
+      <div class="drawing-tool__toolbar toolbar">
+        <div class="toolbar__tools">
+          <div class="field field--stroke-color">
+            <label class="label label--stroke-color" for="stroke-color">Stroke Color</label>
+            <div class="custom-color">
+              <input class="input input--color input--stroke-color" type="color" id="stroke-color" value="#1976D2" title="Color is using for lines and outlines of shapes">
+            </div>
+          </div>
+          <div class="field field--fill-color">
+            <label class="label label--fill-color" for="fill-color">Fill Color</label>
+            <div class="custom-color">
+              <input class="input input--color input--fill-color" type="color" id="fill-color" value="#ffffff" title="Color is using for eraser and filling of shapes">
+            </div>
+          </div>
+          <div class="field field--line-weight">
+            <label class="label label--line-weight" for="line-weight">Line weight</label>
+            <div class="custom-select">
+              <select class="select select--line-weight">
+                <option value="1">1px</option>
+                <option value="3" selected>3px</option>
+                <option value="5">5px</option>
+                <option value="8">8px</option>
+              </select>
+            </div>
+          </div>
+          <div class="field field--tools">
+            <div class="custom-radio custom-radio--pencil">
+              <input class="input input--radio input--pencil" type="radio" name="tools" value="pencil" title="Pencil">
+            </div>
+            <div class="custom-radio custom-radio--eraser">
+              <input class="input input--radio input--eraser" type="radio" name="tools" value="eraser" title="Eraser">
+            </div>
+            <div class="custom-radio custom-radio--rect">
+              <input class="input input--radio input--rect" type="radio" name="tools" value="rect" title="Rectangle">
+            </div>
+            <div class="custom-radio custom-radio--circle">
+              <input class="input input--radio input--circle" type="radio" name="tools" value="circle" title="Circle">
+            </div>
+          </div>
+        </div>
+        <div class="toolbar__controls"><a class="btn btn--primary btn--save" href="#" download="canvas">Save</a>
+          <button class="btn btn--additional btn--clear" type="button">Clear</button>
+        </div>
+      </div><img id="results" width="150" height="150">
+    </div>
+    <script src="script.min.js"></script>
+  </body>
+</html>

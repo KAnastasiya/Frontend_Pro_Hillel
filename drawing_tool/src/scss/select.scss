@@ -1,0 +1,29 @@
+.custom-select {
+  background-color: #fff;
+  position: relative;
+
+  &::after {
+    content: '';
+    height: 22px;
+    width: 1px;
+    background-color: #999;
+    position: absolute;
+    top: 4px;
+    right: 19px;
+  }
+}
+
+.select {
+  font-size: 14px;
+  color: $main-color;
+  width: 100%;
+  height: 30px;
+  padding: 0 5px;
+  background: transparent;
+  border: $input-border-color;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

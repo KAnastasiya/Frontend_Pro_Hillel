@@ -1,0 +1,42 @@
+.btn {
+  font-size: 15px;
+  width: 100%;
+  padding: 8px 20px;
+  display: block;
+  border: none;
+  box-shadow: 1px 1px 3px $btn-shadow-color;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  &:first-of-type {
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 5px $btn-shadow-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: inset 1px 1px 2px #999;
+  }
+
+  &--primary {
+    color: #fff;
+    background-color: $main-color;
+  }
+
+  &--additional {
+    color: $main-color;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}
