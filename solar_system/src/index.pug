@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Solar system
+    link(href='favicon.ico', rel='icon', type='image/x-icon')
+    link(href='style.min.css', rel='stylesheet')
+  body
+    .solar-system
+      .solar-system__center
+      each val in ['mercuriu', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto']
+        div(class='orbit orbit--' + val)
+          div(class='planet planet--' + val)
+            if  val == 'earth'
+              .orbit.orbit--moon
+                .planet.planet--moon
+    .modes
+        .modes__item.modes-2d
+          input(type='radio', name='mode', value='2d', id='2d').modes-2d
+          label(for='2d').modes-2d 2D
+        .modes__item.modes-3d
+          input(type='radio', name='mode', value='3d', id='3d').modes-3d
+          label(for='3d').modes-3d 3D
+        .modes__item.modes-3d-perspective
+          input(type='radio', name='mode', value='3d-perspective', id='3d-perspective').modes-3d-perspective
+          label(for='3d-perspective').modes-3d-perspective 3D с перспективой
+    script(src='script.min.js')

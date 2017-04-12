@@ -1,0 +1,49 @@
+// Угол наклона солнечной системы (эффект 3D)
+$system-rotate-x:                     70deg;
+$system-rotate-y:                    10deg;
+
+// Радиусы планет
+$radius-koeff-small-planet:           1px / 800;
+$radius-koeff-big-planet:             1px / 2000;
+
+$sun-radius:                          695700 * ($radius-koeff-big-planet * 0.2);
+$mercuriu-radius:                     2440   * $radius-koeff-small-planet;
+$venus-radius:                        6052   * $radius-koeff-small-planet;
+$earth-radius:                        6371   * $radius-koeff-small-planet;
+$mars-radius:                         3390   * $radius-koeff-small-planet;
+$jupiter-radius:                      69912  * $radius-koeff-big-planet;
+$saturn-radius:                       57350  * $radius-koeff-big-planet;
+$uranus-radius:                       25362  * $radius-koeff-big-planet;
+$neptune-radius:                      24547  * $radius-koeff-big-planet;
+$pluto-radius:                        1187   * ($radius-koeff-small-planet * 2.5);
+$moon-radius:                         1737   * ($radius-koeff-small-planet * 2);
+
+// Радиусы орбит
+$orbit-style: 1px dotted rgba(255, 255, 255, 0.5);
+$orbit-radius-koeff-small-planet:     0.3;
+$orbit-radius-koeff-big-planet:       0.15;
+
+$mercuriu-orbit-radius:               58    * $orbit-radius-koeff-small-planet + $sun-radius;
+$venus-orbit-radius:                  108   * $orbit-radius-koeff-small-planet + $sun-radius;
+$earth-orbit-radius:                  150   * $orbit-radius-koeff-small-planet + $sun-radius;
+$mars-orbit-radius:                   228   * $orbit-radius-koeff-small-planet + $sun-radius;
+$jupiter-orbit-radius:                778   * $orbit-radius-koeff-big-planet + $sun-radius;
+$saturn-orbit-radius:                 1429  * ($orbit-radius-koeff-big-planet / 1.3) + $sun-radius;
+$uranus-orbit-radius:                 2875  * ($orbit-radius-koeff-big-planet / 2.1) + $sun-radius;
+$neptune-orbit-radius:                4497  * ($orbit-radius-koeff-big-planet / 2.9) + $sun-radius;
+$pluto-orbit-radius:                  59000 * ($orbit-radius-koeff-big-planet / 34) + $sun-radius;
+$moon-orbit-radius:                   0.384 * 8 + $earth-radius;
+
+// Скорости движения планет
+$distance:                            1s * 100;
+
+$mercuriu-speed:                      $distance / 47.87;
+$venus-speed:                         $distance / 35;
+$earth-speed:                         $distance / 29.78;
+$mars-speed:                          $distance / 24.13;
+$jupiter-speed:                       $distance / 13;
+$saturn-speed:                        $distance / 9.99;
+$uranus-speed:                        $distance / 6.81;
+$neptune-speed:                       $distance / 5.43;
+$pluto-speed:                         $distance / 1.67;
+$moon-speed:                          $earth-speed * 1.02;

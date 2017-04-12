@@ -1,0 +1,30 @@
+.orbit {
+  border: $orbit-style;
+  border-radius: 50%;
+}
+
+@each $name, $radius, $speed in
+  (mercuriu, $mercuriu-orbit-radius, $mercuriu-speed),
+  (venus, $venus-orbit-radius, $venus-speed),
+  (earth, $earth-orbit-radius, $earth-speed),
+  (mars, $mars-orbit-radius, $mars-speed),
+  (jupiter, $jupiter-orbit-radius, $jupiter-speed),
+  (saturn, $saturn-orbit-radius, $saturn-speed),
+  (uranus, $uranus-orbit-radius, $uranus-speed),
+  (neptune, $neptune-orbit-radius, $neptune-speed),
+  (pluto, $pluto-orbit-radius, $pluto-speed),
+  (moon, $moon-orbit-radius, $moon-speed) {
+  .orbit--#{$name} {
+    @include square($radius * 2);
+    @include absolute-centered($radius);
+    @include animate(orbit, $speed);
+  }
+
+  .mode-3d {
+    .orbit--#{$name} {
+      @include animate(orbit-3d, $speed);
+      transform-style: preserve-3d;
+    }
+  }
+}
+

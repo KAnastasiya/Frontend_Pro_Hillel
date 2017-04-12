@@ -1,0 +1,45 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include size(100vw, 100vh);
+  background: url(img/space.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+
+  &.perspective {
+    perspective: 600px;
+  }
+}
+
+.modes {
+  padding: 10px;
+  margin: 5px 0 5px 5px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+
+  input {
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+}

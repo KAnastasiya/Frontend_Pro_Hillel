@@ -1,0 +1,36 @@
+.planet {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+}
+
+@each $name, $radius, $speed, $orbit-radius in
+  (mercuriu, $mercuriu-radius, $mercuriu-speed, $mercuriu-orbit-radius),
+  (venus, $venus-radius, $venus-speed, $venus-orbit-radius),
+  (earth, $earth-radius, $earth-speed, $earth-orbit-radius),
+  (mars, $mars-radius, $mars-speed, $mars-orbit-radius),
+  (jupiter, $jupiter-radius, $jupiter-speed, $jupiter-orbit-radius),
+  (saturn, $saturn-radius, $saturn-speed, $saturn-orbit-radius),
+  (uranus, $uranus-radius, $uranus-speed, $uranus-orbit-radius),
+  (neptune, $neptune-radius, $neptune-speed, $neptune-orbit-radius),
+  (pluto, $pluto-radius, $pluto-speed, $pluto-orbit-radius),
+  (moon, $moon-radius, $moon-speed, $moon-orbit-radius) {
+  .planet--#{$name} {
+      @include square($radius * 2);
+      @include animate(orbit-invert, $speed);
+      top: $orbit-radius;
+      right: -$radius;
+      background-image: url('img/#{$name}.png');
+  }
+
+  .mode-3d {
+    .planet--#{$name} {
+      @include animate(orbit-3d-invert, $speed)
+
+      @if $name == 'earth' {
+        transform-style: preserve-3d;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@keyframes orbit {
+  0%   { transform: rotate(0deg);    }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes orbit-invert {
+  0%   { transform: rotate(0deg);   }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes orbit-3d {
+  0%   { transform: rotateZ(0deg);    }
+  100% { transform: rotateZ(-360deg); }
+}
+
+@keyframes orbit-3d-invert {
+  0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+  100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);   }
+}

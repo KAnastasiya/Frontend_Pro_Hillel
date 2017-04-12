@@ -1,0 +1,23 @@
+.solar-system {
+  @include size(inherit, inherit);
+  position: relative;
+
+  &__center {
+    @include square($sun-radius * 2);
+    @include absolute-centered($sun-radius);
+    background: url(img/sun.png) no-repeat center;
+    background-size: contain;
+  }
+}
+
+.mode-3d {
+  .solar-system {
+    transform: rotateX($system-rotate-x) rotateY($system-rotate-y);
+    transform-style: preserve-3d;
+  }
+
+  .solar-system__center {
+    transform: rotateX(-$system-rotate-x) rotateY(-$system-rotate-y);
+    z-index: 1;
+  }
+}

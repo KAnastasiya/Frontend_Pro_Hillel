@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar system</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="solar-system">
+      <div class="solar-system__center"></div>
+      <div class="orbit orbit--mercuriu">
+        <div class="planet planet--mercuriu">
+        </div>
+      </div>
+      <div class="orbit orbit--venus">
+        <div class="planet planet--venus">
+        </div>
+      </div>
+      <div class="orbit orbit--earth">
+        <div class="planet planet--earth">
+          <div class="orbit orbit--moon">
+            <div class="planet planet--moon"></div>
+          </div>
+        </div>
+      </div>
+      <div class="orbit orbit--mars">
+        <div class="planet planet--mars">
+        </div>
+      </div>
+      <div class="orbit orbit--jupiter">
+        <div class="planet planet--jupiter">
+        </div>
+      </div>
+      <div class="orbit orbit--saturn">
+        <div class="planet planet--saturn">
+        </div>
+      </div>
+      <div class="orbit orbit--uranus">
+        <div class="planet planet--uranus">
+        </div>
+      </div>
+      <div class="orbit orbit--neptune">
+        <div class="planet planet--neptune">
+        </div>
+      </div>
+      <div class="orbit orbit--pluto">
+        <div class="planet planet--pluto">
+        </div>
+      </div>
+    </div>
+    <div class="modes">
+      <div class="modes__item modes-2d">
+        <input class="modes-2d" type="radio" name="mode" value="2d" id="2d">
+        <label class="modes-2d" for="2d">2D</label>
+      </div>
+      <div class="modes__item modes-3d">
+        <input class="modes-3d" type="radio" name="mode" value="3d" id="3d">
+        <label class="modes-3d" for="3d">3D</label>
+      </div>
+      <div class="modes__item modes-3d-perspective">
+        <input class="modes-3d-perspective" type="radio" name="mode" value="3d-perspective" id="3d-perspective">
+        <label class="modes-3d-perspective" for="3d-perspective">3D с перспективой</label>
+      </div>
+    </div>
+    <script src="script.min.js"></script>
+  </body>
+</html>
