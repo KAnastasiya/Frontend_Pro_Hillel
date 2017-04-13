@@ -1,9 +1,8 @@
 const gulp = require('gulp');
-const imageminJpegRecompress = require('imagemin-jpeg-recompress');
-const imageminPngquant = require('imagemin-pngquant');
 const gulpsync = require('gulp-sync')(gulp);
 const plugins = require('gulp-load-plugins')();
 const browserSync = require('browser-sync');
+const del = require('del');
 const webpack = require('webpack-stream');
 const named = require('vinyl-named');
 const webpackConfig = require('./webpack.config.js');
@@ -11,6 +10,7 @@ const path = require('path');
 
 const reload = browserSync.reload;
 const publicDir = './';
+const imgDir = path.resolve(publicDir, 'img');
 
 gulp.task('pug', () => {
   gulp
@@ -64,22 +64,12 @@ gulp.task('js', () => {
 });
 
 
-gulp.task('img', () => {
+gulp.task('cleanImg', () => del(imgDir));
+
+gulp.task('img', ['cleanImg'], () => {
   gulp
-  .src('src/img/*')
-  .pipe(plugins.imagemin([
-    imageminJpegRecompress({
-      loops: 4,
-      min: 50,
-      max: 80,
-      quality: 'high',
-      strip: true,
-      progressive: true,
-    }),
-    imageminPngquant({ quality: '50-80' }),
-    plugins.imagemin.svgo({ removeViewBox: true }),
-  ]))
-  .pipe(gulp.dest(path.resolve(publicDir, 'img')));
+    .src('./src/img/*')
+    .pipe(gulp.dest(imgDir));
 });
 
 
@@ -89,7 +79,7 @@ gulp.task('server', () => {
       baseDir: publicDir,
       index: 'index.html',
     },
-    port: '8080',
+    port: '8800',
     open: false,
   });
 });

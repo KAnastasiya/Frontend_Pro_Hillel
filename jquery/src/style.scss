@@ -1,0 +1,41 @@
+@import '~normalize.css/normalize.css';
+
+body {
+  padding: 20px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 16px;
+  padding: 5px 0;
+  cursor: pointer;
+
+  &.is-clicked {
+    color: green;
+    font-size: 18px;
+
+    &#even {
+      color: blue;
+    }
+  }
+
+  &[class*=even] {
+    text-transform: uppercase;
+  }
+}
+
+.btn {
+  padding: 6px 10px;
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}

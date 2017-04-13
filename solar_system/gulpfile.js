@@ -13,7 +13,7 @@ const path = require('path');
 const reload = browserSync.reload;
 
 const publicDir = './';
-const imgDir = path.resolve(publicDir, '/img');
+const imgDir = path.resolve(publicDir, 'img');
 
 
 gulp.task('pug', () => {
@@ -68,10 +68,9 @@ gulp.task('js', () => {
 
 gulp.task('cleanImg', () => del(imgDir));
 
-
 gulp.task('img', ['cleanImg'], () => {
   gulp
-  .src('src/img/*')
+  .src('./src/img/*')
   .pipe(plugins.imagemin([
     imageminJpegRecompress({
       loops: 4,

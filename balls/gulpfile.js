@@ -26,7 +26,7 @@ gulp.task('pug', () => {
 
 gulp.task('scss', () => {
   gulp
-    .src('src/styles.scss')
+    .src('src/style.scss')
     .pipe(plugins.plumber({
       errorHandler: plugins.notify.onError(),
     }))
